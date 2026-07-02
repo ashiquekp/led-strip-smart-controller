@@ -128,7 +128,7 @@ lumora/
 
 ## ✅ Project Status
 
-### Day 1:
+### Day 1
 - Initialized project repository
 - Created Flutter application structure
 - Created ESP32 firmware structure
@@ -136,6 +136,15 @@ lumora/
 - Planned modular firmware design
 - Planned modular Flutter architecture
 - Established development workflow
+
+### Day 2 - Flutter Foundation
+
+- Configured Flutter project architecture
+- Added Riverpod bootstrap
+- Added Material 3 theming
+- Configured GoRouter
+- Added environment variable support
+- Created initial Dashboard page
 
 ---
 
