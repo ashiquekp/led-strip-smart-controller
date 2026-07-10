@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../constants/app_radius.dart';
 import '../constants/app_spacing.dart';
+import 'app_card.dart';
 
 class StatusCard extends StatelessWidget {
   const StatusCard({
@@ -17,36 +17,24 @@ class StatusCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      shape: RoundedRectangleBorder(
-        borderRadius: AppRadius.card,
-      ),
-      child: Padding(
-        padding: AppSpacing.screenPadding,
-        child: Row(
-          children: [
-            Icon(icon,size:30),
+    final theme = Theme.of(context);
 
-            const SizedBox(width:16),
-
-            Expanded(
-              child: Column(
-                crossAxisAlignment:
-                    CrossAxisAlignment.start,
-                children: [
-                  Text(title),
-
-                  Text(
-                    value,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headlineSmall,
-                  ),
-                ],
-              ),
+    return AppCard(
+      child: Row(
+        children: [
+          Icon(icon, size: 30),
+          const SizedBox(width: AppSpacing.lg),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(title, style: theme.textTheme.bodyMedium),
+                const SizedBox(height: 4),
+                Text(value, style: theme.textTheme.headlineSmall),
+              ],
             ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }

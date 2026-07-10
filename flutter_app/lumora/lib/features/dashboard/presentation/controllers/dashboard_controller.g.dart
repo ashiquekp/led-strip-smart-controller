@@ -13,7 +13,7 @@ part of 'dashboard_controller.dart';
 const dashboardControllerProvider = DashboardControllerProvider._();
 
 final class DashboardControllerProvider
-    extends $NotifierProvider<DashboardController, DashboardStatus> {
+    extends $NotifierProvider<DashboardController, DeviceState> {
   const DashboardControllerProvider._()
     : super(
         from: null,
@@ -33,29 +33,29 @@ final class DashboardControllerProvider
   DashboardController create() => DashboardController();
 
   /// {@macro riverpod.override_with_value}
-  Override overrideWithValue(DashboardStatus value) {
+  Override overrideWithValue(DeviceState value) {
     return $ProviderOverride(
       origin: this,
-      providerOverride: $SyncValueProvider<DashboardStatus>(value),
+      providerOverride: $SyncValueProvider<DeviceState>(value),
     );
   }
 }
 
 String _$dashboardControllerHash() =>
-    r'aa1eb30996678505f6a543acf784d19002df2312';
+    r'20be15930371f9ba634063c4fafa08a699cce3e6';
 
-abstract class _$DashboardController extends $Notifier<DashboardStatus> {
-  DashboardStatus build();
+abstract class _$DashboardController extends $Notifier<DeviceState> {
+  DeviceState build();
   @$mustCallSuper
   @override
   void runBuild() {
     final created = build();
-    final ref = this.ref as $Ref<DashboardStatus, DashboardStatus>;
+    final ref = this.ref as $Ref<DeviceState, DeviceState>;
     final element =
         ref.element
             as $ClassProviderElement<
-              AnyNotifier<DashboardStatus, DashboardStatus>,
-              DashboardStatus,
+              AnyNotifier<DeviceState, DeviceState>,
+              DeviceState,
               Object?,
               Object?
             >;

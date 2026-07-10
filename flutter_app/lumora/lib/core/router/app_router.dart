@@ -6,7 +6,7 @@ final GoRouter appRouter = GoRouter(
   routes: <RouteBase>[
     GoRoute(
       path: '/',
-      builder: (_, __) => const DashboardPage(),
+      builder: (_, _) => const DashboardPage(),
     ),
   ],
 );
