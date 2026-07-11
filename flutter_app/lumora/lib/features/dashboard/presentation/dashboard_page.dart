@@ -15,6 +15,12 @@ class DashboardPage extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final dashboard = ref.watch(dashboardControllerProvider);
 
+    ref.listen(dashboardControllerProvider, (_, __) {});
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      ref.read(dashboardControllerProvider.notifier).connect();
+    });
+
     return Scaffold(
       appBar: AppBar(title: const Text('Lumora')),
       body: ListView(
